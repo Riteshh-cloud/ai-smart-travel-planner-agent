@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AdaptiveTrip AI - Constraint-Aware Autonomous Travel Planning Agent"
+    >
+
+    <title>AdaptiveTrip AI | Autonomous Travel Planner</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<div class="background-grid"></div>
+
+<div class="glow glow-one"></div>
+<div class="glow glow-two"></div>
+
+
+<!-- =========================================================
+     MAIN APPLICATION
+========================================================= -->
+
+<main class="app-shell">
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                AT
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    AdaptiveTrip
+                </strong>
+
+                <span>
+                    AI Travel Agent
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-status">
+
+            <span class="live-dot"></span>
+
+            <span>
+                Agent Online
+            </span>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <header class="hero-section">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+
+                <span class="eyebrow-dot"></span>
+
+                AGENTIC AI • AUTONOMOUS PLANNING
+
+            </div>
+
+
+            <h1>
+
+                Travel planning that
+                <span>adapts.</span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                AdaptiveTrip AI uses an LLM, real-time tools and
+                constraint validation to build travel plans,
+                detect conflicts and autonomously replan when
+                conditions change.
+
+            </p>
+
+
+            <div class="hero-tags">
+
+                <span>LLM Reasoning</span>
+                <span>Tool Calling</span>
+                <span>Constraint Checking</span>
+                <span>Autonomous Replanning</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero visual -->
+
+        <div class="hero-visual">
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="agent-core">
+
+                <div class="core-icon">
+                    AI
+                </div>
+
+                <span>
+                    PLANNING
+                </span>
+
+            </div>
+
+
+            <div class="floating-node node-weather">
+                ☁
+                <span>Weather</span>
+            </div>
+
+            <div class="floating-node node-budget">
+                ₹
+                <span>Budget</span>
+            </div>
+
+            <div class="floating-node node-attractions">
+                ★
+                <span>Places</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         ARCHITECTURE / WORKFLOW
+    ====================================================== -->
+
+    <section class="architecture-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="section-label">
+                    SYSTEM ARCHITECTURE
+                </p>
+
+                <h2>
+                    How the agent thinks
+                </h2>
+
+            </div>
+
+            <p>
+                Autonomous decision pipeline
+            </p>
+
+        </div>
+
+
+        <div class="workflow">
+
+            <div class="workflow-step">
+
+                <div class="workflow-number">
+                    01
+                </div>
+
+                <div class="workflow-icon">
+                    ◇
+                </div>
+
+                <strong>
+                    User Request
+                </strong>
+
+                <span>
+                    Preferences & constraints
+                </span>
+
+            </div>
+
+
+            <div class="workflow-line"></div>
+
+
+            <div class="workflow-step active">
+
+                <div class="workflow-number">
+                    02
+                </div>
+
+                <div class="workflow-icon">
+                    AI
+                </div>
+
+                <strong>
+                    Planning Agent
+                </strong>
+
+                <span>
+                    Gemini reasoning
+                </span>
+
+            </div>
+
+
+            <div class="workflow-line"></div>
+
+
+            <div class="workflow-step">
+
+                <div class="workflow-number">
+                    03
+                </div>
+
+                <div class="workflow-icon">
+                    ⚙
+                </div>
+
+                <strong>
+                    Tools
+                </strong>
+
+                <span>
+                    Weather • Budget • Places
+                </span>
+
+            </div>
+
+
+            <div class="workflow-line"></div>
+
+
+            <div class="workflow-step">
+
+                <div class="workflow-number">
+                    04
+                </div>
+
+                <div class="workflow-icon">
+                    ✓
+                </div>
+
+                <strong>
+                    Validator
+                </strong>
+
+                <span>
+                    Constraint checking
+                </span>
+
+            </div>
+
+
+            <div class="workflow-line"></div>
+
+
+            <div class="workflow-step">
+
+                <div class="workflow-number">
+                    05
+                </div>
+
+                <div class="workflow-icon">
+                    ↻
+                </div>
+
+                <strong>
+                    Replanning
+                </strong>
+
+                <span>
+                    Adaptive final plan
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INPUT SECTION
+    ====================================================== -->
+
+    <section class="planner-section">
+
+        <div class="planner-header">
+
+            <div>
+
+                <p class="section-label">
+                    TRIP CONFIGURATION
+                </p>
+
+                <h2>
+                    Describe your journey
+                </h2>
+
+                <p>
+                    Give the agent your destination, budget,
+                    interests and constraints.
+                </p>
+
+            </div>
+
+
+            <div class="ready-indicator">
+
+                <span></span>
+
+                Ready to plan
+
+            </div>
+
+        </div>
+
+
+        <div class="input-panel">
+
+            <div class="input-header">
+
+                <div class="input-title">
+
+                    <span class="input-icon">
+                        ✦
+                    </span>
+
+                    <span>
+                        Travel Request
+                    </span>
+
+                </div>
+
+                <span class="input-hint">
+                    Natural language
+                </span>
+
+            </div>
+
+
+            <textarea
+                id="prompt"
+                spellcheck="false"
+                placeholder="Example: Plan a 3-day Goa trip for 2 people with a budget of ₹18,000. We like beaches, food and photography. Check the weather and keep indoor alternatives."
+            ></textarea>
+
+
+            <div class="input-footer">
+
+                <span class="character-hint">
+                    Describe your trip in your own words
+                </span>
+
+
+                <button
+                    id="runBtn"
+                    class="primary-button"
+                >
+
+                    <span id="buttonIcon">
+                        ▶
+                    </span>
+
+                    <span id="buttonText">
+                        Run Planning Agent
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Example prompts -->
+
+        <div class="example-prompts">
+
+            <span>
+                Try:
+            </span>
+
+            <button
+                class="example-chip"
+                data-prompt="Plan a 3-day Goa trip for 2 people with a budget of ₹18000. We like beaches, food and photography. Check the weather and keep indoor alternatives."
+            >
+                🌴 Goa • ₹18K
+            </button>
+
+
+            <button
+                class="example-chip"
+                data-prompt="Plan a 4-day trip to Hyderabad for 2 people with a budget of ₹12000. We like food, history and photography."
+            >
+                🏛 Hyderabad • ₹12K
+            </button>
+
+
+            <button
+                class="example-chip"
+                data-prompt="Plan a 3-day Goa trip for 2 people with a budget of ₹5000. We want luxury hotels, expensive restaurants, beaches and outdoor photography. Check the weather."
+            >
+                ⚡ Test Replanning
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STATUS BAR
+    ====================================================== -->
+
+    <div
+        id="agentStatus"
+        class="agent-status"
+    >
+
+        <div class="status-left">
+
+            <span class="status-pulse"></span>
+
+            <span id="statusText">
+                Gemini will decide which tools are required.
+            </span>
+
+        </div>
+
+
+        <div class="status-tech">
+
+            <span>
+                Gemini
+            </span>
+
+            <span>•</span>
+
+            <span>
+                Tool Calling
+            </span>
+
+            <span>•</span>
+
+            <span>
+                Open-Meteo
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         RESULTS
+    ====================================================== -->
+
+    <section
+        id="resultSection"
+        class="results-section hidden"
+    >
+
+
+        <!-- =================================================
+             FINAL OUTPUT
+        ================================================== -->
+
+        <div class="result-card plan-card">
+
+            <div class="result-card-header">
+
+                <div>
+
+                    <p class="section-label">
+                        FINAL OUTPUT
+                    </p>
+
+                    <h2>
+                        Adaptive Itinerary
+                    </h2>
+
+                </div>
+
+
+                <div
+                    id="replannedBadge"
+                    class="replanned-badge hidden"
+                >
+
+                    <span>
+                        ↻
+                    </span>
+
+                    Replanned
+
+                </div>
+
+            </div>
+
+
+            <div class="plan-meta">
+
+                <span>
+                    ✦ AI Generated
+                </span>
+
+                <span>
+                    ✓ Constraint Checked
+                </span>
+
+                <span>
+                    ◉ Tool Assisted
+                </span>
+
+            </div>
+
+
+            <article
+                id="plan"
+                class="plan-content"
+            ></article>
+
+
+        </div>
+
+
+        <!-- =================================================
+             AGENT TRACE
+        ================================================== -->
+
+        <aside class="result-card trace-card">
+
+            <div class="result-card-header">
+
+                <div>
+
+                    <p class="section-label">
+                        AGENT TRACE
+                    </p>
+
+                    <h2>
+                        Decision Flow
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="trace"
+                class="trace-list"
+            ></div>
+
+
+        </aside>
+
+    </section>
+
+
+    <!-- =====================================================
+         CAPABILITY CARDS
+    ====================================================== -->
+
+    <section class="capabilities-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="section-label">
+                    AGENT CAPABILITIES
+                </p>
+
+                <h2>
+                    More than a chatbot
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="capability-grid">
+
+
+            <div class="capability-card">
+
+                <div class="capability-icon weather-icon">
+                    ☁
+                </div>
+
+                <div>
+
+                    <h3>
+                        Weather Intelligence
+                    </h3>
+
+                    <p>
+                        Retrieves weather information and
+                        adapts recommendations around
+                        weather-sensitive activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="capability-card">
+
+                <div class="capability-icon budget-icon">
+                    ₹
+                </div>
+
+                <div>
+
+                    <h3>
+                        Budget Planning
+                    </h3>
+
+                    <p>
+                        Estimates trip spending and checks
+                        whether the proposed itinerary fits
+                        the user's budget.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="capability-card">
+
+                <div class="capability-icon places-icon">
+                    ★
+                </div>
+
+                <div>
+
+                    <h3>
+                        Attraction Discovery
+                    </h3>
+
+                    <p>
+                        Selects relevant destinations and
+                        activities based on the traveler's
+                        interests.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="capability-card highlight-card">
+
+                <div class="capability-icon replanning-icon">
+                    ↻
+                </div>
+
+                <div>
+
+                    <h3>
+                        Autonomous Replanning
+                    </h3>
+
+                    <p>
+                        Detects conflicts between constraints
+                        and automatically generates a revised
+                        itinerary.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TECHNOLOGY STACK
+    ====================================================== -->
+
+    <section class="stack-section">
+
+        <div class="stack-header">
+
+            <div>
+
+                <p class="section-label">
+                    TECHNOLOGY STACK
+                </p>
+
+                <h2>
+                    Built with
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stack-grid">
+
+            <div class="stack-item">
+
+                <strong>
+                    Python
+                </strong>
+
+                <span>
+                    Backend
+                </span>
+
+            </div>
+
+
+            <div class="stack-item">
+
+                <strong>
+                    Flask
+                </strong>
+
+                <span>
+                    Web Server
+                </span>
+
+            </div>
+
+
+            <div class="stack-item">
+
+                <strong>
+                    Gemini
+                </strong>
+
+                <span>
+                    LLM
+                </span>
+
+            </div>
+
+
+            <div class="stack-item">
+
+                <strong>
+                    Tool Calling
+                </strong>
+
+                <span>
+                    Agent Tools
+                </span>
+
+            </div>
+
+
+            <div class="stack-item">
+
+                <strong>
+                    Open-Meteo
+                </strong>
+
+                <span>
+                    Weather API
+                </span>
+
+            </div>
+
+
+            <div class="stack-item">
+
+                <strong>
+                    HTML / CSS / JS
+                </strong>
+
+                <span>
+                    Frontend
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ERROR MESSAGE
+    ====================================================== -->
+
+    <div
+        id="error"
+        class="error-message hidden"
+    ></div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div>
+
+            <strong>
+                AdaptiveTrip AI
+            </strong>
+
+            <span>
+                Constraint-Aware Autonomous Travel Planning Agent
+            </span>
+
+        </div>
+
+
+        <div class="footer-tech">
+
+            Python
+            <span>•</span>
+            Flask
+            <span>•</span>
+            Google Gemini
+            <span>•</span>
+            Tool Calling
+            <span>•</span>
+            Open-Meteo
+
+        </div>
+
+    </footer>
+
+
+</main>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   DOM REFERENCES
+========================================================= */
+
+const promptBox =
+    document.getElementById("prompt");
+
+const runBtn =
+    document.getElementById("runBtn");
+
+const buttonText =
+    document.getElementById("buttonText");
+
+const buttonIcon =
+    document.getElementById("buttonIcon");
+
+const resultSection =
+    document.getElementById("resultSection");
+
+const plan =
+    document.getElementById("plan");
+
+const trace =
+    document.getElementById("trace");
+
+const errorBox =
+    document.getElementById("error");
+
+const statusText =
+    document.getElementById("statusText");
+
+const badge =
+    document.getElementById("replannedBadge");
+
+
+/* =========================================================
+   DEFAULT PROMPT
+========================================================= */
+
+promptBox.value =
+    "Plan a 3-day Goa trip for 2 people with a budget of ₹18000. " +
+    "We like beaches, food and photography. " +
+    "Check the weather and keep indoor alternatives.";
+
+
+/* =========================================================
+   EXAMPLE PROMPTS
+========================================================= */
+
+document
+    .querySelectorAll(".example-chip")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                promptBox.value =
+                    button.dataset.prompt;
+
+                promptBox.focus();
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   RUN AGENT
+========================================================= */
+
+runBtn.addEventListener(
+    "click",
+    async () => {
+
+        const prompt =
+            promptBox.value.trim();
+
+
+        if (!prompt) {
+
+            showError(
+                "Please describe your trip first."
+            );
+
+            return;
+
+        }
+
+
+        /* -----------------------------------------------
+           Loading state
+        ------------------------------------------------ */
+
+        setLoading(true);
+
+        errorBox.classList.add("hidden");
+
+        resultSection.classList.remove("hidden");
+
+
+        statusText.textContent =
+            "Gemini is analyzing your request and selecting tools...";
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "/api/plan",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            prompt: prompt
+                        })
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    data.error ||
+                    "Planning failed."
+                );
+
+            }
+
+
+            /* -----------------------------------------
+               Render itinerary
+            ------------------------------------------ */
+
+            plan.innerHTML =
+                renderMarkdown(
+                    data.plan ||
+                    "No itinerary was returned."
+                );
+
+
+            /* -----------------------------------------
+               Replanning status
+            ------------------------------------------ */
+
+            if (data.replanned) {
+
+                badge.classList.remove(
+                    "hidden"
+                );
+
+            } else {
+
+                badge.classList.add(
+                    "hidden"
+                );
+
+            }
+
+
+            /* -----------------------------------------
+               Render agent trace
+            ------------------------------------------ */
+
+            renderTrace(
+                data.trace || []
+            );
+
+
+            /* -----------------------------------------
+               Status
+            ------------------------------------------ */
+
+            const tools =
+                data.tools_used || [];
+
+
+            const toolText =
+                tools.length
+                    ? tools.join(" • ")
+                    : "No tools used";
+
+
+            statusText.textContent =
+                `Tools: ${toolText} • Model: ${data.model}`;
+
+
+        }
+
+        catch (error) {
+
+            showError(
+                error.message ||
+                "The agent could not complete the request."
+            );
+
+
+            statusText.textContent =
+                "Agent execution failed. Check the terminal.";
+
+        }
+
+        finally {
+
+            setLoading(false);
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   LOADING STATE
+========================================================= */
+
+function setLoading(isLoading) {
+
+    runBtn.disabled =
+        isLoading;
+
+
+    if (isLoading) {
+
+        buttonIcon.textContent =
+            "◌";
+
+        buttonText.textContent =
+            "Agent is planning...";
+
+        runBtn.classList.add(
+            "loading"
+        );
+
+    } else {
+
+        buttonIcon.textContent =
+            "▶";
+
+        buttonText.textContent =
+            "Run Planning Agent";
+
+        runBtn.classList.remove(
+            "loading"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+function showError(message) {
+
+    errorBox.textContent =
+        message;
+
+    errorBox.classList.remove(
+        "hidden"
+    );
+
+}
+
+
+/* =========================================================
+   TRACE RENDERING
+========================================================= */
+
+function renderTrace(items) {
+
+    trace.innerHTML = "";
+
+
+    if (!items.length) {
+
+        trace.innerHTML = `
+            <div class="empty-trace">
+                No agent trace available.
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    items.forEach(item => {
+
+        const row =
+            document.createElement(
+                "div"
+            );
+
+
+        row.className =
+            "trace-item";
+
+
+        row.innerHTML = `
+
+            <div class="trace-number">
+                ${escapeHtml(item.step)}
+            </div>
+
+            <div class="trace-content">
+
+                <strong>
+                    ${escapeHtml(item.action)}
+                </strong>
+
+                <small>
+                    ${escapeHtml(
+                        formatDetails(
+                            item.details
+                        )
+                    )}
+                </small>
+
+            </div>
+
+        `;
+
+
+        trace.appendChild(row);
+
+    });
+
+}
+
+
+/* =========================================================
+   DETAILS FORMATTER
+========================================================= */
+
+function formatDetails(value) {
+
+    if (
+        typeof value === "string"
+    ) {
+
+        return value;
+
+    }
+
+
+    try {
+
+        return JSON.stringify(
+            value
+        );
+
+    } catch {
+
+        return String(value);
+
+    }
+
+}
+
+
+/* =========================================================
+   MARKDOWN RENDERER
+========================================================= */
+
+function renderMarkdown(markdown) {
+
+    if (!markdown) {
+
+        return "";
+
+    }
+
+
+    let text =
+        escapeHtml(markdown);
+
+
+    /* Horizontal rules */
+
+    text =
+        text.replace(
+            /^---$/gm,
+            "<hr>"
+        );
+
+
+    /* Headings */
+
+    text =
+        text.replace(
+            /^###### (.*)$/gm,
+            "<h6>$1</h6>"
+        );
+
+    text =
+        text.replace(
+            /^##### (.*)$/gm,
+            "<h5>$1</h5>"
+        );
+
+    text =
+        text.replace(
+            /^#### (.*)$/gm,
+            "<h4>$1</h4>"
+        );
+
+    text =
+        text.replace(
+            /^### (.*)$/gm,
+            "<h3>$1</h3>"
+        );
+
+    text =
+        text.replace(
+            /^## (.*)$/gm,
+            "<h2>$1</h2>"
+        );
+
+    text =
+        text.replace(
+            /^# (.*)$/gm,
+            "<h1>$1</h1>"
+        );
+
+
+    /* Bold */
+
+    text =
+        text.replace(
+            /\*\*(.*?)\*\*/g,
+            "<strong>$1</strong>"
+        );
+
+
+    /* Italic */
+
+    text =
+        text.replace(
+            /(?<!\*)\*([^*\n]+)\*(?!\*)/g,
+            "<em>$1</em>"
+        );
+
+
+    /* Bullet points */
+
+    text =
+        text.replace(
+            /^[ \t]*[-*] (.*)$/gm,
+            "<li>$1</li>"
+        );
+
+
+    /* Numbered items */
+
+    text =
+        text.replace(
+            /^\d+\. (.*)$/gm,
+            "<li>$1</li>"
+        );
+
+
+    /* Wrap list items */
+
+    text =
+        text.replace(
+            /(<li>.*<\/li>(?:\n<li>.*<\/li>)*)/gs,
+            "<ul>$1</ul>"
+        );
+
+
+    /* Paragraph breaks */
+
+    text =
+        text.replace(
+            /\n{2,}/g,
+            "</p><p>"
+        );
+
+
+    /* Single line breaks */
+
+    text =
+        text.replace(
+            /\n/g,
+            "<br>"
+        );
+
+
+    return text;
+
+}
+
+
+/* =========================================================
+   HTML ESCAPING
+========================================================= */
+
+function escapeHtml(value) {
+
+    return String(value)
+
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
+
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
